@@ -29,8 +29,8 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          application_name: "CI-CD-demo"
-          environment_name: "CI-CD-demo-env"
+          application_name: "CI-CD-demo" # 👈 must match your EB Application
+          environment_name: "CI-CD-demo-env" # 👈 must match your EB Environment
           version_label: ${{ github.sha }}
-          region: "ap-south-1"
+          region: "us-east-1" # 👈 use us-east-1 (not ap-south-1)
           deployment_package: "my-app.zip"
